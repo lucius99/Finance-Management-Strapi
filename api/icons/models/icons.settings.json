@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "icons",
+  "info": {
+    "name": "icons",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "iconName": {
+      "type": "string"
+    },
+    "alias": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "bgColor": {
+      "type": "string"
+    }
+  }
+}

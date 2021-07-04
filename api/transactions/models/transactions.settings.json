@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "transactions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isIncome": {
+      "type": "boolean"
+    },
+    "money": {
+      "type": "float"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "via": "transactions",
+      "model": "categories"
+    },
+    "users_permissions_user": {
+      "via": "transactions",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "custom_category": {
+      "via": "transactions",
+      "model": "custom-categories"
+    },
+    "currency_type": {
+      "type": "enumeration",
+      "enum": [
+        "vnd",
+        "usd"
+      ]
+    }
+  }
+}

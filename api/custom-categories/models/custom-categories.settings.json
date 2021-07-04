@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "custom_categories",
+  "info": {
+    "name": "customCategories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "isIncome": {
+      "type": "boolean"
+    },
+    "transactions": {
+      "via": "custom_category",
+      "collection": "transactions"
+    },
+    "sub_custom_categories": {
+      "collection": "custom-categories",
+      "via": "parent_custom_category"
+    },
+    "parent_custom_category": {
+      "model": "custom-categories",
+      "via": "sub_custom_categories"
+    },
+    "icon": {
+      "model": "icons"
+    },
+    "default_parent_category": {
+      "via": "sub_custom_categories",
+      "model": "categories"
+    }
+  }
+}

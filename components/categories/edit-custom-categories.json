@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_categories_edit_custom_categories",
+  "info": {
+    "name": "edit_custom_categories",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "category_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "isIncome": {
+      "type": "boolean"
+    },
+    "icon": {
+      "model": "icons"
+    }
+  }
+}

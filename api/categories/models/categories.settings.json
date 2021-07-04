@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "categories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "isIncome": {
+      "type": "boolean"
+    },
+    "transactions": {
+      "via": "category",
+      "collection": "transactions"
+    },
+    "sub_categories": {
+      "collection": "categories",
+      "via": "parent_category"
+    },
+    "parent_category": {
+      "model": "categories",
+      "via": "sub_categories"
+    },
+    "icon": {
+      "model": "icons"
+    },
+    "sub_custom_categories": {
+      "via": "default_parent_category",
+      "collection": "custom-categories"
+    }
+  }
+}
