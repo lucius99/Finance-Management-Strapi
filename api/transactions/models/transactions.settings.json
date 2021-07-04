@@ -34,7 +34,7 @@
       "via": "transactions",
       "model": "custom-categories"
     },
-    "currency_type": {
+    "currencyType": {
       "type": "enumeration",
       "enum": [
         "vnd",
